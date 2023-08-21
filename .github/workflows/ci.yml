@@ -65,7 +65,7 @@ jobs:
         run: pip3 install ansible molecule molecule-plugins[docker] docker
 
       - name: Install community.docker galaxy collection
-        run: ansible-galaxy collection install community.docker
+        run: ansible-galaxy collection install community.docker -p /home/runner/.ansible/collections
 
       - name: Run Molecule tests.
         run: molecule test
