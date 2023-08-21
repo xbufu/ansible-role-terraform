@@ -1,7 +1,0 @@
----
-# - role: geerlingguy.pip
-roles:
-  - src: geerlingguy.pip
-
-collections:
-  - name: community.docker
