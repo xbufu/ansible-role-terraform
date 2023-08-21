@@ -1,0 +1,14 @@
+---
+- name: Install dependencies
+  ansible.builtin.include_tasks: install_dependencies.yml
+  when: ansible_os_family == "Debian"
+
+- name: Add HashiCorp repository
+  ansible.builtin.include_tasks: add_hashicorp_repository.yml
+  when: ansible_os_family == "Debian"
+
+- name: Install Terraform
+  ansible.builtin.package:
+    name: terraform
+    state: present
+  when: ansible_os_family == "Debian"
