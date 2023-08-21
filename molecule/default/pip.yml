@@ -11,4 +11,4 @@
 
   roles:
     - role: geerlingguy.pip
-    - role: xbufu.terraform
+    - role: geerlingguy.ansible
